@@ -47,10 +47,10 @@ import sys
 from googleapiclient import discovery
 from scipy.optimize import *
 
-import pyqtgraph
-from PyQt5 import QtWidgets, QtCore
-from pyqtgraph import PlotWidget, plot
-import pyqtgraph as pg
+#import pyqtgraph
+#from PyQt5 import QtWidgets, QtCore
+#from pyqtgraph import PlotWidget, plot
+#import pyqtgraph as pg
 # import sys  # We need sys so that we can pass argv to QApplication
 # import os
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
