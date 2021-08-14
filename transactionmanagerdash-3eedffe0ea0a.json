@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "transactionmanagerdash",
+  "private_key_id": "3eedffe0ea0a5dbce0b59cdc4b27057697d4c869",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtWyqrPqJbmsag\ntQI9SgUL+I6Cq59j1KiWQmQ1lvjWb22pNvRXQTZyIRL1sFnYpU83b/TaT12Lv69r\nu5gI56Oy4CbPFRn6hzA8nEMEzeFrBn7xfpAm699Llt0Sx+w8/o8b2vG+/GDBzbtw\nvZ+6pnOs4O87cFUUDQ2n5wfzbKbhzIR05Zs+YJmuNSTqeUk3sQp6TE+us3k1N2nG\nOvXADhRdrK66hliKMYcbjwNHK0waqCHWik9nutSL3e0+VW+JRFsJhIkGq0uTTyYc\nCP2p9jR6+aQhu4U+YzmmblluOAYw1Eu80VO292oOpzOkLnX8NcQ98wrJV10suBN4\nudxoaP2RAgMBAAECggEABfJCnG0hlJLSjWCoGwIW+jokaUcJyJrazYypc00ia/iW\ngl9oMjYCcBfCVrsd2diRxw0IERT32HtSwRdGN8f6TYBy1Fec9IL+nJWfluKZANrQ\nL+hveWZN2oHqQ2KoL89riUERWcO+bedoro1SlUxwW1W73wYTZQStmzzJgQgREV2r\n+JU4Y3+Sd6y44zH6S/AXvqn6xbYz9W5EhNivqPCFOTlgSeDJndELZ9HQiqoEhJhl\nf4a5Gcoqq8BHZnnouocvQyUSySolke14TusmgVUZprpASH9E+cWgT0L+/vsuL19H\n9+YsuQkEF3+yMMpgLJqVPxWQUoGBIm8sTXHcuvjwAQKBgQDwymcZwMYR3DZBYsPV\nKiFdjoQIIu6uC7xkqHVP/MPrVmO+kC7Fh3jIze85qaZj5ZZlj2miE6e74jAUF+yV\nviR22GQ2TWR0cvNr+HiROq8xjmr04504FStmdhBAdOVJ3m2+UQat1lWbmcoAflYU\nPjY/6hucbLjO2IQcs+6vRVZQIQKBgQC4TlghwB0KLwNhQw4b65S45/EcwzsJnARd\nIbwGJakd5bx3ieC9/PPSP109t6XMH45O9nnjBVqPVYc53HeEj+rY/oaYKa7Xks1Z\n+xW6Rd7QYaLXA9z+sZOaJfhCp/5VFaZmVwyggFH2e7iQ7cCVyYcMyt3gO506+fnN\nPxS44qe/cQKBgQDWpFZLiqAFg7uJhbTz695aO5ROfHUvCJ8jS1dnufYbbqLzWCuZ\nQS3WMlyxlh0Qp7PtTG3pYIQA45vgDYOD6D8xAawzC8IkW+PJt3AiZaGOF1oYel3H\nhHdvmobaLlnGA1TodenyREGDtw9uaS/qU5qgVtvOEMyc9jyuKWb3LmPGgQKBgBRU\nZ/pJE6r05p2K5PqFcOE4jGsMye1UbVLMjs3qx43JspFI/yZVyZtOa/2LzVkHvg3N\nuEInbAbVe1YRkIlpypDm+ne8WVHkGoyrWokyfdJkgq7O+UiK0+oz9/96Ql6mRbWS\nMo1duizDFue9ofmjwibSFclPKhfATSKrq6B9N92xAoGBALKswURfFwXIwHU/8B30\n9bWhjSe+pN9XQ2HOdDq+CxMb1TJDTyzGPvD9NGzqfEbxlP/KxsFlkwAJBkwVJtFW\n9qCSf18onz8z4Rdh/vu9pEPxeM3V/0XslOh05WN6CO3TnVYigFPJ0s2HLYRVdia8\nq//dZ6YJzthyh5oKYoaKUabx\n-----END PRIVATE KEY-----\n",
+  "client_email": "transactionmanager@transactionmanagerdash.iam.gserviceaccount.com",
+  "client_id": "116777676249424899753",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/transactionmanager%40transactionmanagerdash.iam.gserviceaccount.com"
+}
