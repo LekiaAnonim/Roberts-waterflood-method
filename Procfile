@@ -1,1 +1,1 @@
-web: gunicorn spectro:server
+web: gunicorn StratV:server
