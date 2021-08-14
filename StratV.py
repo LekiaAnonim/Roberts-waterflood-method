@@ -35,14 +35,14 @@ from decimal import*
 import numpy as np
 from numpy import*
 import random
-import matplotlib
+#import matplotlib
 from scipy.optimize import*
-import matplotlib.pyplot as plt
-from pandastable.core import Table
-from pandastable.data import TableModel
+#import matplotlib.pyplot as plt
+#from pandastable.core import Table
+#from pandastable.data import TableModel
 from datetime import datetime
-import os
-import sys
+#import os
+#import sys
 from googleapiclient import discovery
 from scipy.optimize import *
 
