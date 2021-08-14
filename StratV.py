@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -53,8 +52,8 @@ from scipy.optimize import *
 #import pyqtgraph as pg
 # import sys  # We need sys so that we can pass argv to QApplication
 # import os
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
-from matplotlib.figure import Figure
+#from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+#from matplotlib.figure import Figure
 
 server = Flask(__name__)
 app = dash.Dash(server=server)
@@ -152,7 +151,7 @@ server = app.server
 bed_data_sort = bed_data.sort_values(by='PERMEABILITY', ascending=False)
 PORO = np.array(bed_data_sort['POROSITY']).astype(float)
 permeability_array = np.array(bed_data_sort['PERMEABILITY']).astype(float)
-print(permeability_array)
+#print(permeability_array)
 h = np.array(bed_data_sort['THICKNESS']).astype(float)
 SW = np.array(RPERM_data['SW']).astype(float)
 KRW = np.array(RPERM_data['KRW']).astype(float)
