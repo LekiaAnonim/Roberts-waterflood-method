@@ -1,6 +1,7 @@
 import sys
+from typing import TYPE_CHECKING
 
-if sys.version_info < (3, 7):
+if sys.version_info < (3, 7) or TYPE_CHECKING:
     from ._zsrc import ZsrcValidator
     from ._zmin import ZminValidator
     from ._zmid import ZmidValidator
@@ -9,12 +10,14 @@ if sys.version_info < (3, 7):
     from ._zauto import ZautoValidator
     from ._z import ZValidator
     from ._ysrc import YsrcValidator
+    from ._yhoverformat import YhoverformatValidator
     from ._ycalendar import YcalendarValidator
     from ._ybins import YbinsValidator
     from ._ybingroup import YbingroupValidator
     from ._yaxis import YaxisValidator
     from ._y import YValidator
     from ._xsrc import XsrcValidator
+    from ._xhoverformat import XhoverformatValidator
     from ._xcalendar import XcalendarValidator
     from ._xbins import XbinsValidator
     from ._xbingroup import XbingroupValidator
@@ -23,6 +26,8 @@ if sys.version_info < (3, 7):
     from ._visible import VisibleValidator
     from ._uirevision import UirevisionValidator
     from ._uid import UidValidator
+    from ._texttemplate import TexttemplateValidator
+    from ._textfont import TextfontValidator
     from ._stream import StreamValidator
     from ._showscale import ShowscaleValidator
     from ._showlegend import ShowlegendValidator
@@ -36,7 +41,11 @@ if sys.version_info < (3, 7):
     from ._meta import MetaValidator
     from ._marker import MarkerValidator
     from ._line import LineValidator
+    from ._legendwidth import LegendwidthValidator
+    from ._legendrank import LegendrankValidator
+    from ._legendgrouptitle import LegendgrouptitleValidator
     from ._legendgroup import LegendgroupValidator
+    from ._legend import LegendValidator
     from ._idssrc import IdssrcValidator
     from ._ids import IdsValidator
     from ._hovertemplatesrc import HovertemplatesrcValidator
@@ -72,12 +81,14 @@ else:
             "._zauto.ZautoValidator",
             "._z.ZValidator",
             "._ysrc.YsrcValidator",
+            "._yhoverformat.YhoverformatValidator",
             "._ycalendar.YcalendarValidator",
             "._ybins.YbinsValidator",
             "._ybingroup.YbingroupValidator",
             "._yaxis.YaxisValidator",
             "._y.YValidator",
             "._xsrc.XsrcValidator",
+            "._xhoverformat.XhoverformatValidator",
             "._xcalendar.XcalendarValidator",
             "._xbins.XbinsValidator",
             "._xbingroup.XbingroupValidator",
@@ -86,6 +97,8 @@ else:
             "._visible.VisibleValidator",
             "._uirevision.UirevisionValidator",
             "._uid.UidValidator",
+            "._texttemplate.TexttemplateValidator",
+            "._textfont.TextfontValidator",
             "._stream.StreamValidator",
             "._showscale.ShowscaleValidator",
             "._showlegend.ShowlegendValidator",
@@ -99,7 +112,11 @@ else:
             "._meta.MetaValidator",
             "._marker.MarkerValidator",
             "._line.LineValidator",
+            "._legendwidth.LegendwidthValidator",
+            "._legendrank.LegendrankValidator",
+            "._legendgrouptitle.LegendgrouptitleValidator",
             "._legendgroup.LegendgroupValidator",
+            "._legend.LegendValidator",
             "._idssrc.IdssrcValidator",
             "._ids.IdsValidator",
             "._hovertemplatesrc.HovertemplatesrcValidator",

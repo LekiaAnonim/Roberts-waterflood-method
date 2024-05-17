@@ -8,7 +8,6 @@ class SymbolValidator(_plotly_utils.basevalidators.EnumeratedValidator):
             parent_name=parent_name,
             array_ok=kwargs.pop("array_ok", True),
             edit_type=kwargs.pop("edit_type", "style"),
-            role=kwargs.pop("role", "style"),
             values=kwargs.pop(
                 "values",
                 [
@@ -486,7 +485,19 @@ class SymbolValidator(_plotly_utils.basevalidators.EnumeratedValidator):
                     152,
                     "152",
                     "arrow-bar-right-open",
+                    53,
+                    "53",
+                    "arrow",
+                    153,
+                    "153",
+                    "arrow-open",
+                    54,
+                    "54",
+                    "arrow-wide",
+                    154,
+                    "154",
+                    "arrow-wide-open",
                 ],
             ),
-            **kwargs
+            **kwargs,
         )

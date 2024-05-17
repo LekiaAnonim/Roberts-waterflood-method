@@ -1,8 +1,9 @@
 import sys
+from typing import TYPE_CHECKING
 
-if sys.version_info < (3, 7):
+if sys.version_info < (3, 7) or TYPE_CHECKING:
+    from ._activeselection import Activeselection
     from ._activeshape import Activeshape
-    from ._angularaxis import AngularAxis
     from ._annotation import Annotation
     from ._coloraxis import Coloraxis
     from ._colorscale import Colorscale
@@ -15,12 +16,14 @@ if sys.version_info < (3, 7):
     from ._mapbox import Mapbox
     from ._margin import Margin
     from ._modebar import Modebar
+    from ._newselection import Newselection
     from ._newshape import Newshape
     from ._polar import Polar
-    from ._radialaxis import RadialAxis
     from ._scene import Scene
+    from ._selection import Selection
     from ._shape import Shape
     from ._slider import Slider
+    from ._smith import Smith
     from ._template import Template
     from ._ternary import Ternary
     from ._title import Title
@@ -36,11 +39,14 @@ if sys.version_info < (3, 7):
     from . import hoverlabel
     from . import legend
     from . import mapbox
+    from . import newselection
     from . import newshape
     from . import polar
     from . import scene
+    from . import selection
     from . import shape
     from . import slider
+    from . import smith
     from . import template
     from . import ternary
     from . import title
@@ -60,11 +66,14 @@ else:
             ".hoverlabel",
             ".legend",
             ".mapbox",
+            ".newselection",
             ".newshape",
             ".polar",
             ".scene",
+            ".selection",
             ".shape",
             ".slider",
+            ".smith",
             ".template",
             ".ternary",
             ".title",
@@ -73,8 +82,8 @@ else:
             ".yaxis",
         ],
         [
+            "._activeselection.Activeselection",
             "._activeshape.Activeshape",
-            "._angularaxis.AngularAxis",
             "._annotation.Annotation",
             "._coloraxis.Coloraxis",
             "._colorscale.Colorscale",
@@ -87,12 +96,14 @@ else:
             "._mapbox.Mapbox",
             "._margin.Margin",
             "._modebar.Modebar",
+            "._newselection.Newselection",
             "._newshape.Newshape",
             "._polar.Polar",
-            "._radialaxis.RadialAxis",
             "._scene.Scene",
+            "._selection.Selection",
             "._shape.Shape",
             "._slider.Slider",
+            "._smith.Smith",
             "._template.Template",
             "._ternary.Ternary",
             "._title.Title",

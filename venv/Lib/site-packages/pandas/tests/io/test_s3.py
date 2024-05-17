@@ -4,14 +4,6 @@ import pytest
 
 from pandas import read_csv
 
-from pandas.io.common import is_s3_url
-
-
-class TestS3URL:
-    def test_is_s3_url(self):
-        assert is_s3_url("s3://pandas/somethingelse.com")
-        assert not is_s3_url("s4://pandas/somethingelse.com")
-
 
 def test_streaming_s3_objects():
     # GH17135
@@ -23,3 +15,29 @@ def test_streaming_s3_objects():
     for el in data:
         body = StreamingBody(BytesIO(el), content_length=len(el))
         read_csv(body)
+
+
+@pytest.mark.single_cpu
+def test_read_without_creds_from_pub_bucket(s3_public_bucket_with_data, s3so):
+    # GH 34626
+    pytest.importorskip("s3fs")
+    result = read_csv(
+        f"s3://{s3_public_bucket_with_data.name}/tips.csv",
+        nrows=3,
+        storage_options=s3so,
+    )
+    assert len(result) == 3
+
+
+@pytest.mark.single_cpu
+def test_read_with_creds_from_pub_bucket(s3_public_bucket_with_data, s3so):
+    # Ensure we can read from a public bucket with credentials
+    # GH 34626
+    pytest.importorskip("s3fs")
+    df = read_csv(
+        f"s3://{s3_public_bucket_with_data.name}/tips.csv",
+        nrows=5,
+        header=None,
+        storage_options=s3so,
+    )
+    assert len(df) == 5

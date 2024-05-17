@@ -16,8 +16,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import itertools
 import dash
 import dash_auth
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import plotly.express as px
 import chart_studio.plotly as py
 import plotly.graph_objs as go
@@ -27,7 +27,7 @@ from dash.dependencies import Output, Input
 from dash.exceptions import PreventUpdate
 from datetime import datetime
 import os
-import dash_table
+from dash import dash_table
 from pprint import pprint
 import csv
 import math
@@ -829,7 +829,7 @@ def Robert(SWI, VISO, VISW, OFVF, Length_of_bed_ft, width_of_bed_ft,
     for j in Robert_checklist:
         for d in Robert_data_list:
             if variablename(d)[0] == j:
-                l_b = l_b.append(d,ignore_index=True)     
+                l_b = l_b._append(d,ignore_index=True)     
     translation = {39: None}
     Robert_xaxis_dropdowns = str(Robert_xaxis_dropdown).translate(translation)
 
@@ -837,7 +837,7 @@ def Robert(SWI, VISO, VISW, OFVF, Length_of_bed_ft, width_of_bed_ft,
     l_bxaxis = pd.DataFrame()
     for q in Robert_data_list:
         if variablename(q)[0] == Robert_xaxis_dropdowns:
-            l_bxaxis=l_bxaxis.append(q,ignore_index=True)
+            l_bxaxis=l_bxaxis._append(q,ignore_index=True)
 
     #Collecting Data for graph y-axis
     lb = []

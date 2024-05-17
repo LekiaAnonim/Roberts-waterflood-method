@@ -6,7 +6,7 @@ class StartarrowheadValidator(_plotly_utils.basevalidators.IntegerValidator):
         self,
         plotly_name="startarrowhead",
         parent_name="layout.scene.annotation",
-        **kwargs
+        **kwargs,
     ):
         super(StartarrowheadValidator, self).__init__(
             plotly_name=plotly_name,
@@ -14,6 +14,5 @@ class StartarrowheadValidator(_plotly_utils.basevalidators.IntegerValidator):
             edit_type=kwargs.pop("edit_type", "calc"),
             max=kwargs.pop("max", 8),
             min=kwargs.pop("min", 0),
-            role=kwargs.pop("role", "style"),
-            **kwargs
+            **kwargs,
         )

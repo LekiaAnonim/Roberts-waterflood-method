@@ -1,6 +1,7 @@
 import sys
+from typing import TYPE_CHECKING
 
-if sys.version_info < (3, 7):
+if sys.version_info < (3, 7) or TYPE_CHECKING:
     from ..graph_objs import Waterfall
     from ..graph_objs import Volume
     from ..graph_objs import Violin
@@ -11,6 +12,7 @@ if sys.version_info < (3, 7):
     from ..graph_objs import Streamtube
     from ..graph_objs import Splom
     from ..graph_objs import Scatterternary
+    from ..graph_objs import Scattersmith
     from ..graph_objs import Scatterpolargl
     from ..graph_objs import Scatterpolar
     from ..graph_objs import Scattermapbox
@@ -29,6 +31,7 @@ if sys.version_info < (3, 7):
     from ..graph_objs import Isosurface
     from ..graph_objs import Indicator
     from ..graph_objs import Image
+    from ..graph_objs import Icicle
     from ..graph_objs import Histogram2dContour
     from ..graph_objs import Histogram2d
     from ..graph_objs import Histogram
@@ -47,7 +50,6 @@ if sys.version_info < (3, 7):
     from ..graph_objs import Box
     from ..graph_objs import Barpolar
     from ..graph_objs import Bar
-    from ..graph_objs import Area
     from ..graph_objs import Layout
     from ..graph_objs import Frame
     from ..graph_objs import Figure
@@ -86,6 +88,7 @@ if sys.version_info < (3, 7):
     from ..graph_objs import streamtube
     from ..graph_objs import splom
     from ..graph_objs import scatterternary
+    from ..graph_objs import scattersmith
     from ..graph_objs import scatterpolargl
     from ..graph_objs import scatterpolar
     from ..graph_objs import scattermapbox
@@ -104,6 +107,7 @@ if sys.version_info < (3, 7):
     from ..graph_objs import isosurface
     from ..graph_objs import indicator
     from ..graph_objs import image
+    from ..graph_objs import icicle
     from ..graph_objs import histogram2dcontour
     from ..graph_objs import histogram2d
     from ..graph_objs import histogram
@@ -122,7 +126,6 @@ if sys.version_info < (3, 7):
     from ..graph_objs import box
     from ..graph_objs import barpolar
     from ..graph_objs import bar
-    from ..graph_objs import area
     from ..graph_objs import layout
 else:
     from _plotly_utils.importers import relative_import
@@ -140,6 +143,7 @@ else:
             "..graph_objs.streamtube",
             "..graph_objs.splom",
             "..graph_objs.scatterternary",
+            "..graph_objs.scattersmith",
             "..graph_objs.scatterpolargl",
             "..graph_objs.scatterpolar",
             "..graph_objs.scattermapbox",
@@ -158,6 +162,7 @@ else:
             "..graph_objs.isosurface",
             "..graph_objs.indicator",
             "..graph_objs.image",
+            "..graph_objs.icicle",
             "..graph_objs.histogram2dcontour",
             "..graph_objs.histogram2d",
             "..graph_objs.histogram",
@@ -176,7 +181,6 @@ else:
             "..graph_objs.box",
             "..graph_objs.barpolar",
             "..graph_objs.bar",
-            "..graph_objs.area",
             "..graph_objs.layout",
         ],
         [
@@ -190,6 +194,7 @@ else:
             "..graph_objs.Streamtube",
             "..graph_objs.Splom",
             "..graph_objs.Scatterternary",
+            "..graph_objs.Scattersmith",
             "..graph_objs.Scatterpolargl",
             "..graph_objs.Scatterpolar",
             "..graph_objs.Scattermapbox",
@@ -208,6 +213,7 @@ else:
             "..graph_objs.Isosurface",
             "..graph_objs.Indicator",
             "..graph_objs.Image",
+            "..graph_objs.Icicle",
             "..graph_objs.Histogram2dContour",
             "..graph_objs.Histogram2d",
             "..graph_objs.Histogram",
@@ -226,7 +232,6 @@ else:
             "..graph_objs.Box",
             "..graph_objs.Barpolar",
             "..graph_objs.Bar",
-            "..graph_objs.Area",
             "..graph_objs.Layout",
             "..graph_objs.Frame",
             "..graph_objs.Figure",
@@ -259,12 +264,12 @@ else:
     )
 
 
-if sys.version_info < (3, 7):
+if sys.version_info < (3, 7) or TYPE_CHECKING:
     try:
         import ipywidgets as _ipywidgets
-        from distutils.version import LooseVersion as _LooseVersion
+        from packaging.version import Version as _Version
 
-        if _LooseVersion(_ipywidgets.__version__) >= _LooseVersion("7.0.0"):
+        if _Version(_ipywidgets.__version__) >= _Version("7.0.0"):
             from ..graph_objs._figurewidget import FigureWidget
         else:
             raise ImportError()
@@ -278,9 +283,9 @@ else:
         if import_name == "FigureWidget":
             try:
                 import ipywidgets
-                from distutils.version import LooseVersion
+                from packaging.version import Version
 
-                if LooseVersion(ipywidgets.__version__) >= LooseVersion("7.0.0"):
+                if Version(ipywidgets.__version__) >= Version("7.0.0"):
                     from ..graph_objs._figurewidget import FigureWidget
 
                     return FigureWidget

@@ -1,9 +1,11 @@
 from _plotly_utils.importers import relative_import
 import sys
+from typing import TYPE_CHECKING
 
-if sys.version_info < (3, 7):
+if sys.version_info < (3, 7) or TYPE_CHECKING:
     from ._kaleido import to_image, write_image, full_figure_for_development
     from . import orca, kaleido
+    from . import json
     from ._json import to_json, from_json, read_json, write_json
     from ._templates import templates, to_templated
     from ._html import to_html, write_html
@@ -14,6 +16,7 @@ if sys.version_info < (3, 7):
         "to_image",
         "write_image",
         "orca",
+        "json",
         "to_json",
         "from_json",
         "read_json",
@@ -30,7 +33,7 @@ if sys.version_info < (3, 7):
 else:
     __all__, __getattr__, __dir__ = relative_import(
         __name__,
-        [".orca", ".kaleido", ".base_renderers"],
+        [".orca", ".kaleido", ".json", ".base_renderers"],
         [
             "._kaleido.to_image",
             "._kaleido.write_image",
